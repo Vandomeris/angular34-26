@@ -1,4 +1,10 @@
 import { Routes } from '@angular/router';
 import { Index } from './pages/index';
+import { AboutPage } from './pages/about-page/about-page';
+import { PersonPage } from './pages/person-page/person-page';
 
-export const routes: Routes = [{ path: '', component: Index }];
+export const routes: Routes = [
+  { path: '', component: Index },
+  { path: 'about', component: AboutPage },
+  { path: 'about/:person', component: PersonPage },
+];

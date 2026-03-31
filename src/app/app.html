@@ -1,4 +1,14 @@
-<h1 class="text-red-500">Привет angular! (нет)</h1>
-<a routerLink="/">Главная</a>
-<router-outlet />
-<app-counter />
+<header>
+  <div>LOGO</div>
+
+  <nav>
+    <a routerLink="/">Главная</a>
+    <a routerLink="/about">О нас</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer>Подвал сайта</footer>

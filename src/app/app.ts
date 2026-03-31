@@ -4,7 +4,7 @@ import { Counter } from './components/counter/counter';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Counter, RouterLinkWithHref],
+  imports: [RouterOutlet, RouterLinkWithHref, Counter],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
