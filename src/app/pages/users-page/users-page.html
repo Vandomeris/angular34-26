@@ -1,8 +1,12 @@
 <ul>
   @for (user of users(); track user.id) {
-  <li> {{user.email}} </li>
+  <li> {{user.email | uppercase }} </li>
   }
   @if (error()) {
   <p>{{error()}}</p>
   }
+
+  <p>{{5 | currency: "RUB"}}</p>
+
+  <p>{{ date() | date}}</p>
 </ul>

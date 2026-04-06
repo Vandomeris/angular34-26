@@ -7,6 +7,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular34-26": {
+      "i18n": {
+        "sourceLocale":"ru"
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
