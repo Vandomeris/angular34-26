@@ -2,4 +2,7 @@
   @for (user of users(); track user.id) {
   <li> {{user.email}} </li>
   }
+  @if (error()) {
+  <p>{{error()}}</p>
+  }
 </ul>
