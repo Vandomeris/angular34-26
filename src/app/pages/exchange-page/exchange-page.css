@@ -1,0 +1,6 @@
+.exchange_input,
+select {
+  padding: 10px 20px;
+  background-color: rgb(244, 255, 183);
+  border-radius: 10px;
+}

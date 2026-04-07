@@ -1,1 +1,21 @@
-<p>exchange-page works!</p>
+<div class="max-w-120 mx-auto flex flex-col gap-y-10">
+  <input [(ngModel)]="InputValue" class="exchange_input" type="number" placeholder="Введите сумму обмена">
+
+  <select [(ngModel)]="Valuta_From">
+    @if(rates()?.eur){
+    @for (item of rates()?.eur | keyvalue; track item.key) {
+    <option [value]="item.key">{{ item.key | uppercase }}</option>
+    }
+    }
+  </select>
+  <select [(ngModel)]="Valuta_To">
+    @if(rates()?.eur){
+    @for (item of rates()?.eur | keyvalue; track item.key) {
+    <option [value]="item.key">{{ item.key | uppercase }}</option>
+    }
+    }
+  </select>
+
+  <input [value]="ResultValue() | currency: `${Valuta() | uppercase}`" readonly class="exchange_input" type="text"
+    placeholder="Вы получите">
+</div>
