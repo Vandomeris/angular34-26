@@ -1,6 +1,6 @@
 <ul>
   @for (user of users(); track user.id) {
-  <li> {{user.email | uppercase }} </li>
+  <li appTooltip [toolTipText]="user.phone"> {{user.email | uppercase }} </li>
   }
   @if (error()) {
   <p>{{error()}}</p>

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Collapse } from '../../components/collapse/collapse';
 import { ReversePipePipe } from '../../pipes/reverse-pipe-pipe';
-import { Consoler } from '../../directives/consoler';
+import { Tooltip } from '../../directives/tooltip';
 
 @Component({
   selector: 'app-index',
-  imports: [Collapse, ReversePipePipe, Consoler],
+  imports: [Collapse, ReversePipePipe, Tooltip],
   templateUrl: './index.html',
   styleUrl: './index.css',
 })

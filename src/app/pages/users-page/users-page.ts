@@ -3,10 +3,11 @@ import { UserService } from '../../services/user-service';
 import { User } from '../../../types/User';
 import { isUserArray } from '../../utils';
 import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
+import { Tooltip } from '../../directives/tooltip';
 
 @Component({
   selector: 'app-users-page',
-  imports: [UpperCasePipe, CurrencyPipe, DatePipe],
+  imports: [UpperCasePipe, CurrencyPipe, DatePipe, Tooltip],
   templateUrl: './users-page.html',
   styleUrl: './users-page.css',
 })
