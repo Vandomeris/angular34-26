@@ -16,6 +16,10 @@
     }
   </select>
 
-  <input [value]="ResultValue() | currency: `${Valuta() | uppercase}`" readonly class="exchange_input" type="text"
+  @if (ExchangeRate()) {
+  <p>Курс обмена: {{ExchangeRate()}}</p>
+  }
+
+  <input [value]="ResultValue() | currency: `${Valuta_To() | uppercase}`" readonly class="exchange_input" type="text"
     placeholder="Вы получите">
 </div>

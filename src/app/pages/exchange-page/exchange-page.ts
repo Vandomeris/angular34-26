@@ -19,7 +19,26 @@ export class ExchangePage implements OnInit {
   Valuta_From = signal<string | null>(null);
   Valuta_To = signal<string | null>(null);
 
-  ResultValue = computed(() => {});
+  ExchangeRate = computed(() => {
+    const rates = this.rates();
+    const valFrom = this.Valuta_From();
+    const valTo = this.Valuta_To();
+
+    if (valFrom && valTo && rates) {
+      return rates.eur[valFrom] / rates.eur[valTo];
+    }
+    return null;
+  });
+
+  ResultValue = computed(() => {
+    const inputValue = this.InputValue();
+    const rate = this.ExchangeRate();
+
+    if (inputValue && rate) {
+      return inputValue / rate;
+    }
+    return null;
+  });
 
   ngOnInit(): void {
     this.currencyService.getCurrencyList().subscribe((rates) => {
